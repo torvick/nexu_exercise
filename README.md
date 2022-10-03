@@ -3,10 +3,9 @@
 
 ***
 
-**Features added to the app:**
+**Api Documentation:**
 
-- api documentation
-  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1a9b61b61f552c91f03f?action=collection%2Fimport)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1a9b61b61f552c91f03f?action=collection%2Fimport)
 
 ## pre-requisites:
 - ruby (v3.1.2)
