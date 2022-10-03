@@ -39,7 +39,8 @@ class Api::V1::ModelsController < ApplicationController
   def set_model
     @model = Model.find(params[:id])
   rescue Exception => e
-    return render json: {code: rand(10000000), message: "El Modelo no existe"}, status: :unprocessable_entity
+    @error = CodeError.find_by(name: "set_model")
+    return render json: {code: @error.value, message: @error.description}, status: :unprocessable_entity
   end
 
   def model_params

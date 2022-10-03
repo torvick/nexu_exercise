@@ -4,10 +4,10 @@ class Api::V1::BrandsController < ApplicationController
 
 
   def index
-    debugger
-    @brands = Brand.all.select(:id,:name,Model.average_price.sum)
-    # @brands.averages
-    render json: @brands, status: :ok
+    @args = []
+    @brands = Brand.all.joins(:models).group('brands.id').select("brands.id,brands.name,AVG(average_price) AS TOTAL")
+    @brands.each { |brand| @args << {id: brand.id,name: brand.name ,average_price: brand.total}}
+    render json: @args.sort_by { |ord| ord[:id] }, status: :ok
   end
 
   def models
@@ -27,7 +27,7 @@ class Api::V1::BrandsController < ApplicationController
   def create
     @brand = Brand.new(brand_params)
     if @brand.save
-      render json: @brand, status: :ok
+      render json: @brand, status: :created
     else
       render json: @brand.errors, status: :unprocessable_entity
     end
@@ -38,7 +38,8 @@ class Api::V1::BrandsController < ApplicationController
   def set_brand
     @brand = Brand.find(params[:id])
   rescue Exception => e
-    return render json: {code: rand(10000000), message: "La Marca no existe"}, status: :unprocessable_entity
+    @error = CodeError.find_by(name: "set_brand")
+    return render json: {code: @error.value, message: @error.description}, status: :unprocessable_entity
   end
 
   def brand_params
