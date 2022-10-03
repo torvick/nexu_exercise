@@ -5,7 +5,7 @@
 
 **Api Documentation:**
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1a9b61b61f552c91f03f?action=collection%2Fimport)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1a9b61b61f552c91f03f?action=collection%2Fimport#?env%5BNexus%5D=W3sia2V5IjoiYmFzZV91cmxfZGV2IiwidmFsdWUiOiJsb2NhbGhvc3Q6MzAwMCIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0Iiwic2Vzc2lvblZhbHVlIjoibG9jYWxob3N0OjMwMDAiLCJzZXNzaW9uSW5kZXgiOjB9LHsia2V5IjoiYmFzZV91cmxfcHJvZCIsInZhbHVlIjoiaHR0cDovLzU0LjE0OS4xMzMuMjMyOjMwMDAiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCIsInNlc3Npb25WYWx1ZSI6Imh0dHA6Ly81NC4xNDkuMTMzLjIzMjozMDAwIiwic2Vzc2lvbkluZGV4IjoxfV0=)
 
 ## pre-requisites:
 - ruby (v3.1.2)
