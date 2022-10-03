@@ -9,3 +9,5 @@
 #
 CodeError.create!(name:'set_brand', description:"Couldn't find Brand with id", value: 10001, status: true)
 CodeError.create!(name:'set_model', description:"Couldn't find Model with id", value: 20001, status: true)
+file = File.read('./models.json')
+response = ImportData.build(JSON.parse(file))
