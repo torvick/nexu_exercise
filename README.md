@@ -31,3 +31,7 @@ $ bundle exec rails db:seed
 ```bash
 $ bundle exec rails server
 ```
+
+## Bonus:
+### you can test the application in this url
+- base url: http://54.149.133.232:3000/
